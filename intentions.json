@@ -1,202 +1,454 @@
-{"intentions": [
-        {"tag": "salutation",
-         "patterns": ["Bonjour", "Salut"],
-         "responses": ["Bonjour", "Salut, comment je peux t'aider"],
-         "context_set": ""
+{
+   "intentions":[
+      {
+         "tag":"Welcome",
+         "patterns":[
+            "Hello",
+            "Hi",
+            "Hi there",
+            "Hello there",
+            "Good evening",
+            "Hello, I'm a new student, I have some questions, please!",
+            "Hi, I have some questions for you"
+         ],
+         "responses":[
+            "Great! Hi! How can I help?",
+            "Good! Hi, how can I help you?",
+            "Welcome to our school! I'm here to help you. How can I assist you?",
+            "Hello! I'm here to assist you. How can I help you?",
+            "Welcome! I'm here to assist you. What specific information are you looking for?"
+         ]
+      },
+       {
+         "tag":"CourtesyGreeting",
+         "patterns":[
+            "How are you?",
+            "Hi how are you?",
+            "Hello how are you?",
+            "Hola how are you?",
+            "How are you doing?",
+            "Hope you are doing well?",
+            "Hello hope you are doing well?"
+            
+         ],
+         "responses":[
+            "Hello, I am great, how are you?",
+            "Hello, how are you? I am great thanks!",
+            "Hello, I am good thank you, how are you?",
+            "Hi, I am great, how are you?",
+            "Hi, how are you? I am great thanks!",
+            "Hi, I am good thank you, how are you?",
+            "Hi, good thank you, how are you?"
+         ]
+      },
+       {
+         "tag": "Name",
+         "patterns":[
+            "What is your name?",
+            "What could I call you?",
+            "What can I call you?",
+            "What do your friends call you?",
+            "Who are you?",
+            "Tell me your name?"
+         ],
+         "responses":[
+            "You can call me Esibot",
+            "You may call me Esibot",
+            "Call me Esibot"
+         ]  
+       },
+      {
+         "tag":"Thanks",
+         "patterns":[
+            "OK thank you",
+            "OK thanks",
+            "OK",
+            "Thanks",
+            "That's helpful",
+            "Thank you!",
+            "Thanks for all the information!",
+            "Thanks for your assistance!",
+            "Thanks for your help!"
+         ],
+         "responses":[
+            "Happy to help!",
+            "Any time!",
+            "My pleasure",
+            "You're welcome. If you have more questions in the future, don't hesitate to contact us. Good luck with your studies!",
+            "You're welcome! Have a productive day!"
+         ]
+      },
+       {
+           "tag":"Understand",
+           "patterns":[
+                "Do you understand what I am saying",
+                "Do you understand me",
+                "Do you know what I am saying",
+                "Do you get me",
+                "Do you know what I mean"
+               ],
+           "responses":[
+               "If you ever see that the information given is not relevant to your query, please try to rephrase your query and I would be happy to give you a more adequate answer"
+           ]
+       },
+      {
+         "tag":"Teachers",
+         "patterns":[
+            "How can I find the email addresses of the teachers?"
+         ],
+         "responses":[
+            "Go to the School or Staff tab in the navigation menu. Look for your teacher's name in the list of members. Once you've found their name, click on it to access their profile page, where you should find their email address."
+         ]
+      },
+      {
+         "tag":"Achievements",
+         "patterns":[
+            "How can I get in touch with the school's laureates?"
+         ],
+         "responses":[
+            "Visit the Achievements section on the website. Look for a list of the school's laureates. Click on the laureate's name to access their profile, where you should find contact information."
+         ]
+      },
+      {
+         "tag":"Library",
+         "patterns":[
+            "Can I access library books online through the school's website?"
+         ],
+         "responses":[
+            "Absolutely! Go to the school's website. Navigate to the Library section. Look for the online library catalog. You should find options to search for and access e-books, journals, and other digital documents."
+         ]
+      },
+      {
+         "tag":"Administration",
+         "patterns":[
+            "I want to know when the school's administration office opens and closes during the day. I'm a new student, and I need to complete my registration."
+         ],
+         "responses":[
+            "The school's administration office generally opens at 8:00 AM and closes at 4:30 PM, from Monday to Friday. However, please note that there may be variations during holidays or special events. It's advisable to contact the administration office directly for any changes."
+         ]
+      },
+      {
+         "tag":"LibraryHours",
+         "patterns":[
+            "I'm interested in the library's opening hours. I'll need a quiet place to study."
+         ],
+         "responses":[
+            "The library usually opens at 9:00 AM and closes at 8:00 PM on weekdays. On weekends, it opens at 10:00 AM and closes at 6:00 PM. Keep in mind that these hours may be subject to changes during holidays or exam periods, so it's recommended to contact the library supervisor for the most up-to-date information."
+         ]
+      },
+      {
+         "tag":"BookBorrowing",
+         "patterns":[
+            "Can I borrow a book from the library to read outside of the school premises? If so, how long can I keep it?"
+         ],
+         "responses":[
+            "Yes, you can borrow books from the school library and read them outside of the school. The typical loan period for most books is two weeks. However, some reference or special collections may have different loan periods. You can renew a book if necessary, as long as there are no reservations or requests for it."
+         ]
+      },
+      {
+         "tag":"Exams",
+         "patterns":[
+            "I'm curious about how many exams we have each year. Could you clarify that for me?"
+         ],
+         "responses":[
+            "Certainly! On average, students usually have two major exams per year: one at the end of the first semester and another at the end of the second semester. Additionally, there may be midterm exams or quizzes depending on your courses. Keep in mind that specific exam schedules and policies may vary by department or program, so it's advisable to check with your professors or the academic department for more details."
+         ]
+      },
+      {
+         "tag":"Specialization",
+         "patterns":[
+            "Regarding the availability of specializations in the final year of studies, can students choose them, or does it depend on merit order?"
+         ],
+         "responses":[
+            "Students are allowed to choose their specializations based on their academic interests and the requirements of their degree. However, all programs have limited availability and admission is based on merit order."
+         ],
+         "context_filter":"merit"
+      },
+      {
+         "tag":"Events",
+         "patterns":[
+            "I'm interested in finding information about school events. Where can I find details about upcoming events?"
+         ],
+         "responses":[
+            "You can usually find information about school events in the section or tab titled 'Upcoming Activities.' This section typically provides details about upcoming events such as conferences, workshops, and special campus activities. You may also want to follow the school's social media accounts for event updates and announcements."
+         ]
+      },
+      {
+         "tag":"Clubs",
+         "patterns":[
+            "Where can I find information about school clubs?"
+         ],
+         "responses":[
+            "You can find information about school clubs in the 'Clubs and Student Organizations' section. This section lists available clubs, their descriptions, meeting times, and contact information for club leaders or advisors. You can explore different clubs and decide which ones interest you the most."
+         ]
+      },
+      {
+         "tag":"EventTypes",
+         "patterns":[
+            "I'd like to know what types of events the school organizes for its students."
+         ],
+         "responses":[
+            "The school organizes a variety of events throughout the year, including academic conferences, workshops, cultural festivals, sports events, and social gatherings. These events are designed to enrich your academic and social experience. You can usually find information about upcoming events on the school's website or through campus announcements."
+         ]
+      },
+      {
+         "tag":"Invitations",
+         "patterns":[
+            "Are school events open only to school students, or can we invite friends from other schools as well?"
+         ],
+         "responses":[
+            "Most school events are primarily intended for students and staff of the school. However, some events may be open to external guests, including friends from other schools or the community. The accessibility of events to external guests depends on the specific event and its organizers. You can usually find details about invitation policies and invitations in event announcements or by contacting the event organizers."
+         ]
+      },
+      {
+         "tag":"Certifications",
+         "patterns":[
+            "Does the school allow students to obtain free certifications from major companies in the field of computer science?"
+         ],
+         "responses":[
+            "The school collaborates with some major companies and organizations to offer certification programs and opportunities to students. These programs may provide certifications in various fields, including computer science. Eligibility and availability of free certifications may vary, so it's advisable to check with your academic department or the career services office for more information on current opportunities."
+         ]
+      },
+      {
+          "tag":"Sport",
+          "patterns":[
+              "I'd like to know if the school has sports facilities or sports fields for students."
+          ],
+          "responses": ["Yes, our school provides sports facilities for students. We have a sports field, gymnasium, and various courts for sports like basketball, tennis, and volleyball. These facilities are available for student use, and we often organize sports events and intramural activities."]
+      },
+      {
+         "tag":"ITSupport",
+         "patterns":[
+            "I'm experiencing technical issues with my school email and the online learning platform. How can I get technical support?"
+         ],
+         "responses":[
+            "I'm sorry to hear that you're having technical issues. To get technical support, you can contact the school's IT helpdesk. They can assist you with email, online learning platform, and other technical problems. You can usually find their contact information on the school's website or in the 'Contact Us' section."
+         ]
+      },
+      {
+         "tag":"Feedback",
+         "patterns":[
+            "I have some feedback and suggestions for improving the school's services. How can I share my feedback?"
+         ],
+         "responses":[
+            "Your feedback is important to us! You can share your feedback and suggestions through the school's official feedback channels. These may include online forms, surveys, or contact information for the school's feedback department. Your input helps us enhance our services and make improvements."
+         ]
+      },
+      {
+         "tag":"Registration",
+         "patterns":[
+            "I'm having trouble with my online registration. Can you guide me through the process?"
+         ],
+         "responses":[
+            "I'm here to help! Online registration can vary depending on the school's specific procedures and systems. It's recommended to follow the step-by-step instructions provided on the school's website. If you encounter any issues during the registration process, you can contact the school's registration department or the IT helpdesk for assistance. They will be able to guide you through the process and address any problems you may encounter."
+         ]
+      },
+      {
+         "tag":"Scholarships",
+         "patterns":[
+            "Can you provide information about scholarships available for students?"
+         ],
+         "responses":[
+            "Certainly! There are several scholarships available to students based on various criteria such as academic merit, financial need, and specific fields of study. You can find detailed information about scholarships, eligibility criteria, and application procedures on the school's website. Additionally, you may want to contact the school's financial aid office for personalized assistance and information about scholarship opportunities."
+         ]
+      },
+      {"tag": "Restaurant",
+         "patterns": ["That's great! Is there a restaurant or dining options on campus?"],
+         "responses": ["Yes, we have dining options on campus. We have a cafeteria where you can grab meals, snacks, and beverages. Additionally, there are food vendors and dining establishments near the campus. You can explore different dining options both on and off campus."]
+      },
+      {"tag": "StudyHours",
+         "patterns": ["Thanks for the info! I'm also curious about the study hours in the engineering program. How many hours do we typically study per week?"],
+         "responses": ["The number of study hours in the engineering program can vary depending on your courses and workload. On average, engineering students often spend around 15-20 hours per week in lectures and class-related activities. However, it's essential to set aside additional time for self-study, assignments, and projects. This can vary from student to student but generally ranges from 20-30 hours per week."]
+      },
+      {"tag": "Awards",
+         "patterns": ["I'd like to know where I can find information about the competitions won by our school in the past and any programs related to them"],
+         "responses": ["You can typically find information about our school's past competition wins and related programs under the section dedicated to Achievements. There, you'll likely find details about competitions, awards, and programs that our school has participated in or won."]
         },
-        {"tag": "salutation1",
-         "patterns": ["ça va?", "comment allez-vous?"],
-         "responses": ["Tout va bien merci"],
-         "context_set": ""
+        {"tag": "SchoolSocialMedia",
+         "patterns": ["I'm interested in finding the social media accounts of our school"],
+         "responses": ["To find our school's official social media accounts, look at the bottom of the home page for links or icons that lead to the official social media profiles. These may include accounts on platforms like Facebook, Twitter, Instagram, and LinkedIn."]
         },
-        {"tag": "aurevoir",
-         "patterns": ["Au revoir", "À bientôt"],
-         "responses": ["À bientôt", "Bonne journée"]
+        {
+            "tag": "ClubsSocialMedia",
+         "patterns": ["I'm interested in finding the social media accounts of our school clubs"],
+         "responses": ["For school clubs' social media accounts, you can check with each individual club. Most clubs have their own social media presence, often on platforms like Facebook or Instagram. You can check under the section Clubs and student organizations"]
         },
-        {"tag": "merci",
-         "patterns": ["merci", "ça m'aide beaucoup"],
-         "responses": ["de rien", "avec plaisir"]
+        {
+          "tag": "Doctorate",
+          "patterns": [
+            "I am currently a student in the engineering program, and I would like to know about the possibility of pursuing a doctorate after obtaining my degree."
+          ],
+          "responses": [
+            "You have the opportunity to pursue a doctorate after completing your engineering program. It's an excellent opportunity to deepen your knowledge in your field of study."
+          ]
         },
-        {"tag": "professeur",
-         "patterns": ["comment contacter un professeur?", "où chercher un professeur?"],
-         "responses": ["visiter le site esi.ac.ma, Nos enseignants puis la liste des mails"]
+        {
+          "tag": "DoctorateFields",
+          "patterns": ["What fields are available for the doctorate program?"],
+          "responses": [
+            "Currently, our school offers two doctoral programs: the first one is Computer Science and Data Science; This program focuses on the areas of computer science, data analysis, and information. The second one is Information, Documentation, Knowledge, and Society; This program focuses on the fields of information, documentation, knowledge management, and information society. You'll have the opportunity to explore topics related to information management and the impact of the information society."
+          ]
         },
-        {"tag": "lauréat",
-         "patterns": ["comment contacter un lauréat?", "où chercher un lauréat?"],
-         "responses": ["visiter le site esi.ac.ma puis Nos lauréats"]
+        {
+          "tag": "DoctorateApplication",
+          "patterns": ["How does the application process for the doctorate program work?"],
+          "responses": [
+            "The application process for the doctorate program typically involves several steps. First, you'll need to prepare an application package including your CV, transcripts, letters of recommendation, a motivation letter, and possibly a research proposal. Then, there is usually an application interview during which you'll discuss your motivations, research project, and suitability for the chosen doctoral program."
+          ]
         },
-        {"tag": "débouchés",
-         "patterns": ["quels sont les débouchés possibles?"],
-         "responses": ["visiter le site esi.ac.ma puis Nos formations"]
+        {
+          "tag": "DoctorateEligible",
+          "patterns": ["Are there specific requirements to be eligible for the doctorate program?"],
+          "responses": [
+            "Indeed, the process is competitive since the doctorate is an advanced level of study. Specific requirements may vary depending on the doctoral program and the school, but generally, you'll need to have obtained an engineering degree or an equivalent qualification. Additional requirements may include a certain level of language proficiency, demonstrated research skills, and alignment with your desired research project."
+          ]
         },
-        {"tag": "stages",
-         "patterns": ["est-ce qu'il y a des offres de stages?"],
-         "responses": ["Visiter stages et PFE sous la rubrique Nos étudiants"]
+        {
+          "tag": "MasterFields",
+          "patterns": [
+             "What fields are available for the master's program?"],
+          "responses": [
+             "Currently, our school offers three master's programs: a Specialized Master's in Information Management, a Specialized Master's in Competitive and Strategic Intelligence, and a Specialized Master's in Managerial Engineering for Info-cultural Organizations and Heritage Valuation."
+          ]
         },
-        {"tag": "filières",
-         "patterns": ["quels sont les filières existantes?"],
-         "responses": ["pour cycle ingénieur, master ou doctorat?"],
-         "context_set": "filières"
+        {
+          "tag": "MECOHVProgram",
+          "patterns": [
+              "Can you provide an explanation of the objectives and training offered in the Master's in Managerial Engineering for Info-cultural Organizations and Heritage Valuation program?"],
+          "responses": [
+            "The objective of this program is to train managers of info-cultural organizations with expertise in areas such as budgeting, accounting, and human resource management in info-cultural organizations, project engineering in cultural fields, implementation of cultural policies, cultural diplomacy and soft power, heritage valuation, marketing of cultural services, and legal, sociological, and economic approaches to culture."
+          ]
         },
-        {"tag": "ingénieur",
-         "patterns": ["ingénieur"],
-         "responses": ["il y a 3 filières ICSD, ISITD et IIN"],
-         "context_filter": "ingénieur"
+        {
+          "tag": "CSIProgram",
+          "patterns": ["Can you provide an explanation of the objectives and training offered in the Master's in Competitive and Strategic Intelligence program?"],
+          "responses": [
+            "The objective of this program is to train a core of excellence in the disciplinary fields of Competitive and Strategic Intelligence for various organizational domains and to train specialists in research, processing, analysis, and dissemination of strategic information necessary for the development of organizations and territories."
+          ]
         },
-        {"tag": "master",
-         "patterns": ["master"],
-         "responses": ["il y a 2 filières ISC et DA"],
-         "context_filter": "master"
+        {
+          "tag": "IMProgram",
+          "patterns": ["Can you provide an explanation of the objectives and training offered in the Master's in Information Management program?"],
+          "responses": [
+            "The objective of this program is to train information professionals capable of selecting, collecting, organizing, preserving, managing, and disseminating all forms of recorded information for the benefit of users in all types of professional environments."
+          ]
         },
-        {"tag": "doctorat",
-         "patterns": ["doctorat"],
-         "responses": ["il y a 2 filières ISDI et IDCS"],
-         "context_filter": "doctorat"
+        {
+          "tag": "EngineeringSpecializations",
+          "patterns": [
+              "What specializations are available for the engineering program?"],
+          "responses": [
+              "Currently, our school offers four specializations: Knowledge Engineering and Data Science, Digital Information Engineering, Information Systems and Digital Transformation, and Information Systems Security and Cyber Defense."
+          ]
         },
-        {"tag": "horaire",
-         "patterns": ["quels sont les horaires d'activité de la Bibliothèque?"],
-         "responses": ["horaire continu de 9h30 à 16h"]
+        {
+          "tag": "DIE",
+          "patterns": ["Can you provide an explanation of the training offered in Digital Information Engineering?"],
+          "responses": [
+            "The program aims to offer technical and professional training in digital information careers. It allows students interested in deepening their knowledge and skills in computer science to acquire the qualifications and skills needed to work in new information and documentation careers at the intersection of computer science and information sciences."
+          ]
         },
-        {"tag": "convention",
-         "patterns": ["quels sont les conventions et partenariats de l'école ?"],
-         "responses": ["les partenaires sont: BNRM, BNF, ENSSIB, EBAD"]
+        {
+          "tag": "KEDS",
+          "patterns": ["Can you provide an explanation of the training offered in Knowledge Engineering and Data Science?"],
+          "responses": [
+            "The program aims to provide comprehensive training that combines modules in mathematics/statistics, computer science, and artificial intelligence. It aims to equip students with the skills demanded by the job market to manage and analyze data, including concepts such as exploratory data analysis, statistical inference and modeling, machine learning, and high-dimensional data analysis."
+          ]
         },
-        {"tag": "club",
-         "patterns": ["quels sont les clubs de l'école ?"],
-         "responses": ["club Code Esi, JCMP, BDS, Forum ESI-Entreprises"]
+        {
+          "tag": "ISDT",
+          "patterns": ["Can you provide an explanation of the training offered in Information Systems and Digital Transformation?"],
+          "responses": [
+            "The program aims to provide highly qualified technological profiles for work in these fields, perform the jobs and functions that result from them, and adapt to the changes and mutations that are imposed. The program content takes into account new mutations that have led to new concepts and even new domains and disciplines: the digital society, the information society, business intelligence, IT governance, ubiquitous systems, digital transformation, knowledge economy, and knowledge."
+          ]
         },
-                {"tag": "salutation_en",
-         "patterns": ["hello", "hi","good morning","good evening","good afternoon","hey!"],
-         "responses": ["hi", "Hi, how can I help you"],
-         "context_set": ""
+        {
+          "tag": "ISSCD",
+          "patterns": ["Can you provide an explanation of the training offered in Information Systems Security and Cyber Defense?"],
+          "responses": [
+            "The program in Information Systems Security and Cyber Defense aims to meet the growing need to train cybersecurity engineers who can effectively address security issues faced by companies. The program offers a comprehensive education combining the basics of digital transformation and data science with cutting-edge technical and managerial components of cybersecurity."
+          ]
         },
-        {"tag": "salutation1_en",
-         "patterns": ["How are you?", "How are you doing?"],
-         "responses": ["Everything is going well thank you"],
-         "context_set": ""
+        {
+          "tag": "KEDSOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Knowledge Engineering and Data Science?"],
+          "responses": [
+            "The training offers a professional future and career as a Big Data Engineer, Machine Learning and Deep Learning Engineer, Business Intelligence Engineer, Cloud Computing Engineer, Computer Vision Engineer, Data Analyst, Data Scientist, and Data Architect."
+          ],
+          "context_filter": "Débouchés en Ingénierie des Connaissances et Science des Données"
         },
-        {"tag": "aurevoir_en",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+        {
+          "tag": "DIEOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Digital Information Engineering?"],
+          "responses": [
+            "The training offers a professional future and career as an Information Systems Engineer, Web Development Engineer, Consultant in Information and Service Technologies, Digital Archiving and Dematerialization Engineer, Consultant in Document Management Projects, Competitive Intelligence Manager, and Digital Transformation Consultant."
+          ]
         },
-        {"tag": "merci_en",
-         "patterns": ["thank you", "it helps me a lot"],
-         "responses": ["You're welcome", "with pleasure"]
+        {
+          "tag": "ISDOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Information Systems and Digital Transformation?"],
+          "responses": [
+            "The training offers a professional future and career as an Information Systems Engineer, Software Development Engineer, Packaged Software Integration Consultant, Functional Information System Architect, Web and Mobile Developer, and Full Stack Developer."
+          ]
         },
-        {"tag": "professeur_en",
-         "patterns": ["how to contact a teacher?", "where to look for a teacher?"],
-         "responses": ["visit the site esi.ac.ma, Our teachers then the list of emails"]
+        {
+          "tag": "ISSCDOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Information Systems Security and Cyber Defense?"],
+          "responses": [
+            "The training offers a professional future and career as a Chief Information Security Officer (CISO), Information Security Engineer, Information Security Auditor, Information Systems Security Risk Manager, Information Security Project Manager, Cybersecurity Consultant, Information Systems Security Solution Integrator, and Information Systems Security Architect."
+          ]
         },
-        {"tag": "lauréat_en",
-         "patterns": ["how to contact a laureate?", "where to look for a winner?"],
-         "responses": ["visit the website esi.ac.ma then Our winners"]
+        {
+          "tag": "IMOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Information Management?"],
+          "responses": [
+            "The training offers a professional future and career as a Librarian and Media Specialist, Documentalist, Information and Documentation Consultant, Watcher and Administrative Document Manager."
+          ]
         },
-        {"tag": "débouchés_en",
-         "patterns": ["what are the possible outlets?"],
-         "responses": ["visit the website esi.ac.ma then Our training"]
+        {
+          "tag": "CSIOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Competitive and Strategic Intelligence?"],
+          "responses": [
+            "The training offers a professional future and career as the Head of a Competitive Intelligence, Economic Intelligence, Strategic Intelligence, or Knowledge Management Center, Competitive Intelligence Analyst, Auditor in Competitive Intelligence, Knowledge Manager, Information Architect, Facilitator (Consultant or Expert) of Strategic Intelligence or Knowledge Management Network/System."
+          ]
         },
-        {"tag": "stages_en",
-         "patterns": ["are there internship offers?"],
-         "responses": ["Visit internships and PFE under the heading Our students"]
-        },
-        {"tag": "filières_en",
-         "patterns": ["what are the existing channels?"],
-         "responses": ["for engineering, master or doctorate?"],
-         "context_set": "filières_en"
-        },
-        {"tag": "ingénieur_en",
-         "patterns": ["engineer"],
-         "responses": ["there are 3 streams ICSD, ISITD and IIN"],
-         "context_filter": "ingénieur_en"
-        },
-        {"tag": "master_en",
-         "patterns": ["Master"],
-         "responses": ["there are 2 streams ISC and DA"],
-         "context_filter": "master_en"
-        },
-        {"tag": "doctorat_en",
-         "patterns": ["doctorate"],
-         "responses": ["there are 2 streams ISDI and IDCS"],
-         "context_filter": "doctorat_en"
-        },
-        {"tag": "horaire_en",
-         "patterns": ["What are the library's working hours?"],
-         "responses": ["continuous schedule from 9:30 a.m. to 4 p.m."]
-        },
-        {"tag": "convention_en",
-         "patterns": ["what are the school's agreements and partnerships ?"],
-         "responses": ["the partners are: BNRM, BNF, ENSSIB, EBAD"]
-        },
-        {"tag": "club_en",
-         "patterns": ["what are the school clubs ?"],
-         "responses": ["Club Code Esi, JCMP, BDS, Forum ESI-Companies"]
-        },
-         {"tag": "salutation_ar",
-         "patterns": ["صباح الخير", "سلام","أهلا"],
-         "responses": ["أهلا", "مرحبا كيف يمكنني مساعدتك"],
-         "context_set": ""
-        },
-        {"tag": "salutation1_ar",
-         "patterns": ["كيف الحال؟", "كيف حالكم؟"],
-         "responses": ["كل شيء على ما يرام شكرا"],
-         "context_set": ""
-        },
-        {"tag": "aurevoir_ar",
-         "patterns": ["إلى اللقاء", "مع السلامة"],
-         "responses": ["إلى اللقاء", "اتمنى لك يوم جيد"]
-        },
-        {"tag": "merci_ar",
-         "patterns": ["شكرا لك", "هدا يساعدني كثيرا"],
-         "responses": ["على الرحب و السعة", "بكل سرور"]
-        },
-        {"tag": "professeur_ar",
-         "patterns": ["كيف اتصل بالمدرس؟", "أين تبحث عن مدرس؟"],
-         "responses": ["قم بزيارة موقع esi.ac.ma ، مدرسينا ثم قائمة رسائل البريد الإلكتروني"]
-        },
-        {"tag": "lauréat",
-         "patterns": ["كيف تتواصل مع الخريجين", "أين تبحث عن الخريجين؟"],
-         "responses": ["قم بزيارة الموقع الإلكتروني esi.ac.ma ثم موقع الخريجين لدينا"]
-        },
-        {"tag": "débouchés_ar",
-         "patterns": ["ما هي الافاق الممكنة?"],
-         "responses": ["قم بزيارة الموقع الإلكتروني esi.ac.ma ثم تدريبنا"]
-        },
-        {"tag": "stages_ar",
-         "patterns": ["هل توجد عروض تدريب؟"],
-         "responses": ["قم بزيارة فترات التدريب و PFE تحت عنوان طلابنا"]
-        },
-        {"tag": "filières_ar",
-         "patterns": ["ما هي المسالك الموجودة؟"],
-         "responses": ["للهندسة ، ماجستير أو دكتوراه؟"],
-         "context_set": "filières_ar"
-        },
-        {"tag": "ingénieur_ar",
-         "patterns": ["للهندسة"],
-         "responses": ["هناك 3 مسالك ICSD و ISITD و IIN"],
-         "context_filter": "ingénieur_ar"
-        },
-        {"tag": "master_ar",
-         "patterns": ["ماجستير"],
-         "responses": ["هناك 2 مسلكين ISC و DA"],
-         "context_filter": "master_ar"
-        },
-        {"tag": "doctorat_ar",
-         "patterns": ["دكتوراه"],
-         "responses": ["هناك 2 مسلكين ISDI و IDCS"],
-         "context_filter": "doctorat_ar"
-        },
-        {"tag": "horaire_ar",
-         "patterns": ["ما هي مواعيد عمل المكتبة؟"],
-         "responses": ["جدول مستمر من 9:30 صباحًا حتى 4 مساءً."]
-        },
-        {"tag": "convention_ar",
-         "patterns": ["ما هي اتفاقيات وشراكات المدرسة؟"],
-         "responses": ["الشركاء هم: BNRM، BNF، ENSSIB، EBAD"]
-        },
-        {"tag": "club_ar",
-         "patterns": ["ما هي النوادي المدرسية؟"],
-         "responses": ["Club Code Esi و JCMP و BDS و Forum ESI-Companies"]
-        }
+        {
+          "tag": "MECOHVOpportunities",
+          "patterns": ["What are the professional opportunities offered by the training in Managerial Engineering for Info-cultural Organizations and Heritage Valuation?"],
+          "responses": [
+            "The training offers a professional future and career as a Director of a library or archives center, Administrator of historic monuments, Museum Director, Cultural Center Director, Heritage Animator, Gallery Manager, Exhibition Curator, Festival Director, Cultural Project Manager, Public Relations Officer, Cultural Engineering Consultant, Cultural Administrator, or Sponsorship and Partnership Officer."
+          ]
+    }, 
+      {
+         "tag":"Goodbye",
+         "patterns":[
+            "Bye",
+            "Adios",
+            "See you later",
+            "Goodbye",
+            "Farewell",
+            "Thank you for your help!",
+            "That's all I needed. Thanks!"
+         ],
+         "responses":[
+            "See you later",
+            "Bye! Come back again soon.",
+            "You're welcome! If you ever have more questions, feel free to return. Have a great day!",
+            "You're welcome! Don't hesitate to reach out if you need assistance in the future. Goodbye!",
+            "You're welcome! If you have any more questions later on, don't hesitate to ask. Goodbye, and have a wonderful day!"
+         ]
+      },
+      {
+         "tag":"Fallback",
+         "patterns":[
 
-]
-} 
+         ],
+         "responses":[
+            "I'm sorry, but I couldn't understand your question. Please try rephrasing it or asking a different question, and I'll do my best to assist you."
+         ]
+      }
+   ],
+   "context_set":[
+
+   ]
+}
